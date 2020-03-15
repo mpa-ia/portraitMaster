@@ -11,11 +11,13 @@ exports.add = async (req, res) => {
     const fileName = file.path.split('/').slice(-1)[0]; // cut only filename from full path, e.g. C:/test/abc.jpg -> abc.jpg
     const validFileExtension = /(.*?)\.(jpg|jpeg|gif|png)$/;
     const validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const invalidSigns = /[<>%\$]/;
 
     /* Form Validation */
     let isValid = true;
     if (!title && !author && !email && !file) isValid = false;
     else if (title.length >= 25 || author.length >= 50) isValid = false;
+    else if (!invalidSigns.test(title) || !invalidSigns.test(author)) isValid = false;
     else if (!validEmail.test(email)) isValid = false;
     else if (!validFileExtension.test(fileName)) isValid = false;
 
