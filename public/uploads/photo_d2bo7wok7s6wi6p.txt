@@ -1,0 +1,129 @@
+$ git commit
+husky > pre-commit (node v10.16.3)
+Stashing changes... [started]
+Stashing changes... [skipped]
+→ No partially staged files found...
+Running tasks... [started]
+Running tasks for src/**/*.js [started]
+npm run test-related -- [started]
+npm run test-related -- [failed]
+→
+Running tasks for src/**/*.js [failed]
+→
+Running tasks... [failed]
+
+
+
+× npm run test-related -- found some errors. Please fix them and try committing again.
+
+> pizzeria-portal@0.1.0 test-related C:\KODILLA\WDP-2001-03
+> react-scripts test --watchAll=false --noStackTrace --findRelatedTests "C:/KODILLA/WDP-2001-03/src/components/common/ComparedProduct/ComparedProduct.js" "C:/KODILLA/WDP-2001-03/src/components/common/ComparedProduct/ComparedProductContainer.js" "C:/KODILLA/WDP-2001-03/src/components/common/FeatureBox/FeatureBox.js" "C:/KODILLA/WDP-2001-03/src/components/common/ProductBox/ProductBox.js" "C:/KODILLA/WDP-2001-03/src/components/common/ProductBox/ProductBoxContainer.js" "C:/KODILLA/WDP-2001-03/src/components/features/FeatureBoxes/FeatureBoxes.js" "C:/KODILLA/WDP-2001-03/src/components/features/NewFurniture/NewFurniture.js" "C:/KODILLA/WDP-2001-03/src/components/features/ProductSearch/ProductSearch.js" "C:/KODILLA/WDP-2001-03/src/components/features/Sale/Sale.js" "C:/KODILLA/WDP-2001-03/src/components/features/Sale/Sale.test.js" "C:/KODILLA/WDP-2001-03/src/components/features/StickyBar/StickyBar.js" "C:/KODILLA/WDP-2001-03/src/components/features/StickyBar/StickyBarContainer.js" "C:/KODILLA/WDP-2001-03/src/components/layout/Footer/Footer.js" "C:/KODILLA/WDP-2001-03/src/components/views/Homepage/Homepage.js" "C:/KODILLA/WDP-2001-03/src/redux/comparisonRedux.js" "C:/KODILLA/WDP-2001-03/src/redux/initialState.js" "C:/KODILLA/WDP-2001-03/src/redux/productsRedux.js" "C:/KODILLA/WDP-2001-03/src/redux/store.js"
+
+PASS src/components/common/FeatureBox/FeatureBox.test.js
+FAIL src/components/features/NewFurniture/NewFurniture.test.js
+● Test suite failed to run
+
+  Cannot find module 'react-fade-in' from 'NewFurniture.js'
+
+  However, Jest was able to find:
+        './NewFurniture.js'
+        './NewFurniture.module.scss'
+        './NewFurniture.test.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+PASS src/components/features/ProductSearch/ProductSearch.test.js
+PASS src/components/layout/MenuBar/MenuBar.test.js
+PASS src/components/features/FeatureBoxes/FeatureBoxes.test.js
+PASS src/components/layout/Header/Header.test.js
+FAIL src/App.test.js
+● Test suite failed to run
+
+  Cannot find module 'react-fade-in' from 'NewFurniture.js'
+
+  However, Jest was able to find:
+        './NewFurniture.js'
+        './NewFurniture.module.scss'
+        './NewFurniture.test.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+  However, Jest was able to find:
+        '../../features/NewFurniture/NewFurnitureContainer.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+  However, Jest was able to find:
+        'components/views/Homepage/Homepage.js'
+        'components/views/Homepage/Homepage.module.scss'
+        'components/views/Homepage/Homepage.test.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+  However, Jest was able to find:
+        './App.js'
+        './App.test.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+FAIL src/components/views/Homepage/Homepage.test.js
+● Test suite failed to run
+
+  Cannot find module 'react-fade-in' from 'NewFurniture.js'
+
+  However, Jest was able to find:
+        './NewFurniture.js'
+        './NewFurniture.module.scss'
+        './NewFurniture.test.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+  However, Jest was able to find:
+        '../../features/NewFurniture/NewFurnitureContainer.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+  However, Jest was able to find:
+        './Homepage.js'
+        './Homepage.module.scss'
+        './Homepage.test.js'
+
+  You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'].
+
+  See https://jestjs.io/docs/en/configuration#modulefileextensions-array-string
+
+PASS src/components/common/ProductBox/ProductBox.test.js
+PASS src/components/features/Sale/Sale.test.js
+PASS src/components/layout/Footer/Footer.test.js
+
+Test Suites: 3 failed, 8 passed, 11 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        8.904s, estimated 12s
+Ran all test suites related to files matching /C:\\KODILLA\\WDP-2001-03\\src\\components\\common\\ComparedProduct\\ComparedProduct.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\common\\ComparedProduct\\ComparedProductContainer.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\common\\FeatureBox\\FeatureBox.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\common\\ProductBox\\ProductBox.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\common\\ProductBox\\ProductBoxContainer.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\FeatureBoxes\\FeatureBoxes.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\NewFurniture\\NewFurniture.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\ProductSearch\\ProductSearch.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\Sale\\Sale.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\Sale\\Sale.test.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\StickyBar\\StickyBar.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\features\\StickyBar\\StickyBarContainer.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\layout\\Footer\\Footer.js|C:\\KODILLA\\WDP-2001-03\\src\\components\\views\\Homepage\\Homepage.js|C:\\KODILLA\\WDP-2001-03\\src\\redux\\comparisonRedux.js|C:\\KODILLA\\WDP-2001-03\\src\\redux\\initialState.js|C:\\KODILLA\\WDP-2001-03\\src\\redux\\productsRedux.js|C:\\KODILLA\\WDP-2001-03\\src\\redux\\store.js/i.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! pizzeria-portal@0.1.0 test-related: `react-scripts test --watchAll=false --noStackTrace --findRelatedTests "C:/KODILLA/WDP-2001-03/src/components/common/ComparedProduct/ComparedProduct.js" "C:/KODILLA/WDP-2001-03/src/components/common/ComparedProduct/ComparedProductContainer.js" "C:/KODILLA/WDP-2001-03/src/components/common/FeatureBox/FeatureBox.js" "C:/KODILLA/WDP-2001-03/src/components/common/ProductBox/ProductBox.js" "C:/KODILLA/WDP-2001-03/src/components/common/ProductBox/ProductBoxContainer.js" "C:/KODILLA/WDP-2001-03/src/components/features/FeatureBoxes/FeatureBoxes.js" "C:/KODILLA/WDP-2001-03/src/components/features/NewFurniture/NewFurniture.js" "C:/KODILLA/WDP-2001-03/src/components/features/ProductSearch/ProductSearch.js" "C:/KODILLA/WDP-2001-03/src/components/features/Sale/Sale.js" "C:/KODILLA/WDP-2001-03/src/components/features/Sale/Sale.test.js" "C:/KODILLA/WDP-2001-03/src/components/features/StickyBar/StickyBar.js" "C:/KODILLA/WDP-2001-03/src/components/features/StickyBar/StickyBarContainer.js" "C:/KODILLA/WDP-2001-03/src/components/layout/Footer/Footer.js" "C:/KODILLA/WDP-2001-03/src/components/views/Homepage/Homepage.js" "C:/KODILLA/WDP-2001-03/src/redux/comparisonRedux.js" "C:/KODILLA/WDP-2001-03/src/redux/initialState.js" "C:/KODILLA/WDP-2001-03/src/redux/productsRedux.js" "C:/KODILLA/WDP-2001-03/src/redux/store.js"`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the pizzeria-portal@0.1.0 test-related script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Marysia\AppData\Roaming
+pm-cache\_logs\2020-01-23T20_54_55_843Z-debug.log
+husky > pre-commit hook failed (add --no-verify to bypass)
