@@ -8,17 +8,19 @@ exports.add = async (req, res) => {
     const { title, author, email } = req.fields;
     const file = req.files.file;
 
+    const fileName = file.path.split('/').slice(-1)[0]; // cut only filename from full path, e.g. C:/test/abc.jpg -> abc.jpg
+    const validFileExtension = /(.*?)\.(jpg|jpeg|gif|png)$/;
+
     /* Form Validation */
     let isValid = true;
     if (!title && !author && !email && !file) isValid = false;
     else if (title.length >= 25 || author.length >= 50) isValid = false;
+    else if (!validFileExtension.test(fileName)) isValid = false;
 
     if (isValid) {
-      const fileName = file.path.split('/').slice(-1)[0]; // cut only filename from full path, e.g. C:/test/abc.jpg -> abc.jpg
       const newPhoto = new Photo({ title, author, email, src: fileName, votes: 0 });
       await newPhoto.save(); // ...save new photo in DB
       res.json(newPhoto);
-      console.log('File OK');
     } else {
       throw new Error('Wrong input!');
     }
